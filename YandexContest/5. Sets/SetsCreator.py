@@ -96,69 +96,111 @@ def check_if_mach(input_file, output_file):
     return check_if_correct(input_table, output)
 
 
-class GraphNode:
+class Universum:
     children = dict()
-    parents = dict()\
+    all_sets = dict()
 
-
-    def __init__(self, id_key):
-        self.id_key = id_key
-        self.children = dict()
-        self.parents = dict()
-        self.overwrited = False
-        self.new_identity = None
+    def __init__(self, sets_amount):
+        for i in range(sets_amount):
+            self.set_id = 0
+            new_node = SetGraph(i+1, self)
+            self.all_sets[i+1] = new_node
+            self.children[i+1] = new_node
+            new_node.parents[0] = self
 
     def __str__(self):
-        return f'Graph with ID {self.id_key}'
-
-    def perform_safe(self, funk, arg):
-
-        def perform():
-            if not self.overwrited:
-                return funk(self, arg)
-            else:
-                return self.new_identity.funk(self.new_identity, arg)
-
-        return perform()
-
-    def add_child(self, child):
-        return self.perform_safe(GraphNode.add_child_wrapped, child)
+        return f'Universum with {self.all_sets.keys()} sets and {self.children.keys()} direct children'
 
     def remove_child(self, child):
-        return self.perform_safe(GraphNode.remove_child_wrapped, child)
+        self.children.pop(child.set_id)
+        child.parents.pop(self.set_id)
 
-    def add_parent(self, parent):
-        return self.perform_safe(GraphNode.add_parent_wrapped, parent)
+    def make_equal(self, first_set, second_set):
+        extra_parents = second_set.parents.keys() - first_set.parents.keys()
+        extra_children = second_set.children.keys() - first_set.children.keys()
+        for extra_parent in extra_parents:
+            first_set.add_parent(second_set.parents[extra_parent])
+        for extra_child in extra_children:
+            first_set.add_child(second_set.children[extra_child])
+        second_set_parents = list(second_set.parents.keys())
+        for parent in second_set_parents:
+            second_set.remove_parent(second_set.parents[parent])
+        second_set_children = list(second_set.children.keys())
+        for child in second_set_children:
+            second_set.remove_child(second_set.children[child])
+        self.all_sets[second_set.set_id] = first_set
+
+    def find_child(self, child_id):
+        if child_id in self.children:
+            return self.children[child_id]
+        return None
+
+    def get_identity(self, set_arg):
+        return self.all_sets[set_arg.set_id]
+
+
+class SetGraph:
+    def __init__(self, set_id, universum):
+        self.set_id = set_id
+        self.parents = dict()
+        self.children = dict()
+        self.universum = universum
+
+    def __str__(self):
+        return f'Set with {self.set_id} Id'
+
+    def get_self_identity(self):
+        return self.universum.get_identity(self)
+
+    def remove_child(self, child):
+        actual_identity = self.get_self_identity()
+        actual_identity.children.pop(child.set_id)
+        child.parents.pop(actual_identity.set_id)
 
     def remove_parent(self, parent):
-        return self.perform_safe(GraphNode.remove_parent_wrapped, parent)
+        actual_identity = self.get_self_identity()
+        actual_identity.parents.pop(parent.set_id)
+        parent.children.pop(actual_identity.set_id)
 
-    def add_child_wrapped(self, child):
-        self.children[child.id_key] = child
+    def add_child(self, child):
+        actual_identity = self.get_self_identity()
+        actual_identity.children[child.set_id] = child
+        child.parents[actual_identity.set_id] = actual_identity
 
-    def remove_child_wrapped(self, child):
-        self.children.pop(child.id_key)
+    def add_parent(self, parent):
+        actual_identity = self.get_self_identity()
+        actual_identity.parents[parent.set_id] = parent
+        parent.children[actual_identity.set_id] = actual_identity
 
-    def add_parent_wrapped(self, parent):
-        self.parents[parent.id_key] = parent
+    def find_parent(self, parent_id):
+        actual_identity = self.get_self_identity()
+        if parent_id in actual_identity.parents:
+            return actual_identity.parents[parent_id]
+        return None
 
-    def remove_parent_wrapped(self, parent):
-        self.parents.pop(parent.id_key)
+    def find_child(self, child_id):
+        actual_identity = self.get_self_identity()
+        if child_id in actual_identity.children:
+            return actual_identity.children[child_id]
+        return None
 
-    @staticmethod
-    def create_new_graph():
-        universum = GraphNode(0)
-        return universum
-
+        
 
 def create_answer(requirements):
-    universum = GraphNode.create_new_graph()
-    universum.add_child(GraphNode(1))
-    print(str(universum.children[1]))
+    uni = Universum(len(requirements))
+    first = uni.find_child(1)
+    second = uni.find_child(2)
+    third = uni.find_child(3)
+    forth = uni.find_child(4)
+    first.add_child(second)
+    uni.make_equal(third, second)
+    second.add_child(forth)
+    return second
 
-create_answer('balls')
 
 size_of_input_table, input_table = read_input('nc_inp1.txt')
+ans = create_answer(input_table)
+print(ans)
 
 
 matching_pairs = [['nc_inp1.txt', 't_out1.txt'],
