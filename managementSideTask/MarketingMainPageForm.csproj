@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{943E04DE-3E92-4ACD-9679-261E595D1B20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MarketingMainPageForm</RootNamespace>
+    <AssemblyName>MarketingMainPageForm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimationPlayer.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ресурс 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ресурс 4%400.5x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\lein_animation\lein_for_banner0000.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0001.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0002.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0003.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0004.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0005.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0006.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0007.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0008.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0009.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0010.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0011.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0012.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0013.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0014.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0015.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0016.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0017.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0018.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0019.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0020.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0021.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0022.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0023.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0024.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0025.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0026.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0027.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0028.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0029.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0030.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0031.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0032.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0033.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0034.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0035.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0036.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0037.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0038.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0039.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0040.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0041.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0042.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0043.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0044.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0045.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0046.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0047.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0048.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0049.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0050.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0051.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0052.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0053.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0054.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0055.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0056.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0057.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0058.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0059.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0060.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0061.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0062.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0063.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0064.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0065.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0066.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0067.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0068.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0069.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0070.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0071.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0072.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0073.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0074.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0075.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0076.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0077.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0078.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0079.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0080.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0081.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0082.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0083.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0084.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0085.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0086.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0087.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0088.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0089.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0090.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0091.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0092.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0093.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0094.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0095.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0096.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0097.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0098.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0099.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0100.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0101.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0102.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0103.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0104.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0105.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0106.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0107.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0108.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0109.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0110.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0111.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0112.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0113.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0114.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0115.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0116.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0117.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0118.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0119.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0120.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0121.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0122.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0123.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0124.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0125.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0126.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0127.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0128.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0129.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0130.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0131.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0132.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0133.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0134.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0135.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0136.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0137.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0138.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0139.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0140.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0141.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0142.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0143.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0144.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0145.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0146.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0147.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0148.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0149.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0150.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0151.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0152.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0153.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0154.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0155.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0156.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0157.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0158.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0159.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0160.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0161.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0162.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0163.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0164.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0165.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0166.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0167.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0168.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0169.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0170.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0171.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0172.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0173.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0174.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0175.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0176.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0177.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0178.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0179.jpg" />
+    <Content Include="Resources\lein_animation\lein_for_banner0180.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
