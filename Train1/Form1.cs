@@ -40,7 +40,14 @@ namespace Train1
         private void EbashButton_Click(object sender, EventArgs e)
         {
             int[] input = ArrayManipulator.ParseArray(textBox1.Text);
-            int[] output = ArrayManipulator.RepaceMinAndMax(input);
+            int[] output = ArrayManipulator.Manipulate(input);
+            label3.Text = String.Join(" ", output);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int[] input = ArrayManipulator.ParseArray(textBox1.Text);
+            int[] output = ArrayManipulator.DeletePrime(input);
             label3.Text = String.Join(" ", output);
         }
     }
