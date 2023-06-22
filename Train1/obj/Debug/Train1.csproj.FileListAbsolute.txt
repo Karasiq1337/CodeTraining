@@ -1,0 +1,11 @@
+C:\Users\johnn\source\repos\Train1\bin\Debug\Train1.exe.config
+C:\Users\johnn\source\repos\Train1\bin\Debug\Train1.exe
+C:\Users\johnn\source\repos\Train1\bin\Debug\Train1.pdb
+C:\Users\johnn\source\repos\Train1\obj\Debug\Train1.csproj.AssemblyReference.cache
+C:\Users\johnn\source\repos\Train1\obj\Debug\Train1.csproj.SuggestedBindingRedirects.cache
+C:\Users\johnn\source\repos\Train1\obj\Debug\Train1.Form1.resources
+C:\Users\johnn\source\repos\Train1\obj\Debug\Train1.Properties.Resources.resources
+C:\Users\johnn\source\repos\Train1\obj\Debug\Train1.csproj.GenerateResource.cache
+C:\Users\johnn\source\repos\Train1\obj\Debug\Train1.csproj.CoreCompileInputs.cache
+C:\Users\johnn\source\repos\Train1\obj\Debug\Train1.exe
+C:\Users\johnn\source\repos\Train1\obj\Debug\Train1.pdb
